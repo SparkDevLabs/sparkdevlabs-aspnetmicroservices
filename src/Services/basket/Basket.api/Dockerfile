@@ -6,10 +6,10 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
-COPY ["Services/Basket/Basket.api/Basket.api.csproj", "Services/Basket/Basket.api/"]
-RUN dotnet restore "services/basket/Basket.api/Basket.api.csproj"
+COPY ["Services/basket/Basket.api/Basket.api.csproj", "Services/basket/Basket.api/"]
+RUN dotnet restore "Services/basket/Basket.api/Basket.api.csproj"
 COPY . .
-WORKDIR "/src/services/basket/Basket.api"
+WORKDIR "/src/Services/basket/Basket.api"
 RUN dotnet build "Basket.api.csproj" -c Release -o /app/build
 
 FROM build AS publish
