@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{47BDAD04-12AA-4781-8D8D-6CB0C063CC60}"
 EndProject
@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.api", "services\bask
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{1FCED7BC-20C8-4DB8-B8D0-22E29945A8DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.api", "..\SRB\services\Discount\Discount.api\Discount.api.csproj", "{269CD1F2-4E42-4776-90FA-76929F6C5938}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.api", "Services\Discount\Discount.api\Discount.api.csproj", "{873A0F8B-FFAE-4072-9BAB-4DB98CCA7B1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,10 @@ Global
 		{C7CA7AC8-9CAB-4411-B3E7-F3C5FA8C753C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7CA7AC8-9CAB-4411-B3E7-F3C5FA8C753C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7CA7AC8-9CAB-4411-B3E7-F3C5FA8C753C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{269CD1F2-4E42-4776-90FA-76929F6C5938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{269CD1F2-4E42-4776-90FA-76929F6C5938}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{269CD1F2-4E42-4776-90FA-76929F6C5938}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{269CD1F2-4E42-4776-90FA-76929F6C5938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{873A0F8B-FFAE-4072-9BAB-4DB98CCA7B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{873A0F8B-FFAE-4072-9BAB-4DB98CCA7B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{873A0F8B-FFAE-4072-9BAB-4DB98CCA7B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{873A0F8B-FFAE-4072-9BAB-4DB98CCA7B1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,7 +53,7 @@ Global
 		{1444D4FA-B047-40E7-A781-28A8D335DF4A} = {47BDAD04-12AA-4781-8D8D-6CB0C063CC60}
 		{C7CA7AC8-9CAB-4411-B3E7-F3C5FA8C753C} = {1444D4FA-B047-40E7-A781-28A8D335DF4A}
 		{1FCED7BC-20C8-4DB8-B8D0-22E29945A8DB} = {47BDAD04-12AA-4781-8D8D-6CB0C063CC60}
-		{269CD1F2-4E42-4776-90FA-76929F6C5938} = {1FCED7BC-20C8-4DB8-B8D0-22E29945A8DB}
+		{873A0F8B-FFAE-4072-9BAB-4DB98CCA7B1A} = {1FCED7BC-20C8-4DB8-B8D0-22E29945A8DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44C2F01D-1F24-4FE7-BB23-07420FC05D5E}
