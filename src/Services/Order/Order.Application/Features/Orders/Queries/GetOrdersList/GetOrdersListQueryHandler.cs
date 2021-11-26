@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MediatR;
 using Order.Application.Contracts.Persistence;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Order.Application.Features.Orders.Queries.GetOrdersList
 {
-    public class GetOrdersListQueryHandler
+    public class GetOrdersListQueryHandler : IRequestHandler<GetOrdersListQuery, List<OrdersVM>>
     {
         private readonly IOrderRepository _orderRepository;
         private readonly IMapper _mapper;

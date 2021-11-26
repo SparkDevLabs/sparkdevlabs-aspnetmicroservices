@@ -1,15 +1,17 @@
+//using EventBus.Messages.Common;
+//using HealthChecks.UI.Client;
+//using MassTransit;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+//using Order.api.EventBusConsumer;
+using Order.Application;
+using Order.Infrastructure;
+using Order.Infrastructure.Persistence;
 
 namespace Order.api
 {
@@ -25,6 +27,8 @@ namespace Order.api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddApplicationServices();
+            services.AddInfrastructureServices(Configuration);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
