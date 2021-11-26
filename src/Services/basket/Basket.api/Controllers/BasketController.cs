@@ -1,5 +1,8 @@
-﻿using Basket.api.Entities;
+﻿using AutoMapper;
+using Basket.api.Entities;
 using Basket.api.Repositories.Interfaces;
+using EventBus.Messages.Events;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
@@ -13,8 +16,8 @@ namespace Basket.api.Controllers
     {
         private readonly IBasketRepository _repository;
         //private readonly DiscountGrpcService _discountGrpcService;
-        //private readonly IPublishEndpoint _publishEndpoint;
-        //private readonly IMapper _mapper;
+        private readonly IPublishEndpoint _publishEndpoint;
+        private readonly IMapper _mapper;
 
         public BasketController(IBasketRepository repository)
         {
@@ -72,9 +75,9 @@ namespace Basket.api.Controllers
             }
 
             // send checkout event to rabbitmq
-            //var eventMessage = _mapper.Map<BasketCheckoutEvent>(basketCheckout);
-            //eventMessage.TotalPrice = basket.TotalPrice;
-            //await _publishEndpoint.Publish<BasketCheckoutEvent>(eventMessage);
+            var eventMessage = _mapper.Map<BasketCheckoutEvent>(basketCheckout);
+            eventMessage.TotalPrice = basket.TotalPrice;
+            await _publishEndpoint.Publish<BasketCheckoutEvent>(eventMessage);
 
             // remove the basket
             await _repository.DeleteBasket(basket.UserName);
